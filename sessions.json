@@ -5,6 +5,12 @@
       "data": {
         "step": "createExt_number"
       }
+    },
+    {
+      "id": "8417455041:8417455041",
+      "data": {
+        "waitingFor": "dailyPrice"
+      }
     }
   ]
 }

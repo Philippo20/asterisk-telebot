@@ -1271,8 +1271,8 @@ setInterval(async () => {
 // ===============================
 // LAUNCH BOT
 // ===============================
- bot.launch().then(() => {
-  console.log('🤖 Bot is running on Digital Ocean!');
+bot.startPolling().then(() => {
+  console.log('🤖 Bot is running successfully on Digital Ocean!');
 }).catch((error) => {
   console.error('❌ Bot failed to start:', error);
 });

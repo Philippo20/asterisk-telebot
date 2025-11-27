@@ -1,15 +1,15 @@
 require("dotenv").config();
 
 const { Telegraf, Markup } = require("telegraf");
-const connectDB = require("./config/db");
-const Admin = require("./models/Admin");
-const { runSSHCommand } = require("./services/sshService");
-const SubscriptionPrice = require("./models/SubscriptionPrice");
-const User = require("./models/User");
-const Voucher = require("./models/Voucher");
-const UserExtension = require("./models/UserExtension");
-const BlockedUser = require("./models/BlockedUser");
-const AsteriskManager = require("./services/createExtensionService");
+const connectDB = require("./src/config/db");
+const Admin = require("./src/models/Admin");
+const { runSSHCommand } = require("./src/services/sshService");
+const SubscriptionPrice = require("./src/models/SubscriptionPrice");
+const User = require("./src/models/User");
+const Voucher = require("./src/models/Voucher");
+const UserExtension = require("./src/models/UserExtension");
+const BlockedUser = require("./src/models/BlockedUser");
+const AsteriskManager = require("./src/services/createExtensionService");
 
 
 

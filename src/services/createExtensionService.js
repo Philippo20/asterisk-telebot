@@ -2,7 +2,7 @@ const { runSSHCommand } = require("./sshService");
 
 class AsteriskManager {
   /**
-   * Create a PJSIP extension
+   *Create a PJSIP extension
    */
   static async createExtension(ext, secret, cliNumber) {
     let callerid = cliNumber.includes("<") ? cliNumber : `<${cliNumber}>`;

@@ -1271,4 +1271,8 @@ setInterval(async () => {
 // ===============================
 // LAUNCH BOT
 // ===============================
-bot.launch();
+ bot.launch().then(() => {
+  console.log('🤖 Bot is running on Digital Ocean!');
+}).catch((error) => {
+  console.error('❌ Bot failed to start:', error);
+});

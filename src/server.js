@@ -1,5 +1,4 @@
 require("dotenv").config();
-const bot = new Telegraf(process.env.BOT_TOKEN);
 const express = require("express");
 const bodyParser = require("body-parser");
 const connectDB = require("./config/db");

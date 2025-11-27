@@ -1260,7 +1260,7 @@ setInterval(async () => {
     try {
       await bot.telegram.sendMessage(
         chatId,
-        "⚠️ Your subscription has expired.\nYour SIP extension has been removed.\nRenew subscription to continue using the service."
+        "⚠️ Your subscription has expired.\nYour SIP extension has been removed.\nRenew subscription to continue using the services."
       );
     } catch (err) {
       console.log(`⚠️ Could not notify user ${chatId}.`);

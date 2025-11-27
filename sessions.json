@@ -9,7 +9,7 @@
     {
       "id": "8417455041:8417455041",
       "data": {
-        "waitingFor": "weeklyPrice"
+        "waitingFor": "dailyPrice"
       }
     }
   ]

@@ -1,21 +1,32 @@
 require("dotenv").config();
-const bot = new Telegraf(process.env.BOT_TOKEN);
 
 const express = require("express");
 const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
-const bot = require("./bot/bot");
-const paymentWebhook = require("./routes/paymentWebhook");
+
+//const paymentWebhook = require("./src/routes/paymentWebhook");
+
+// 🟢 IMPORTANT: Your bot file already launches the bot,
+// handles SSH, cron jobs, and DB logic.
+require("./index");  //
 
 const app = express();
 app.use(bodyParser.json());
-app.use("/", paymentWebhook);
 
-async function start() {
+// Payment webhook route
+//app.use("/", paymentWebhook);
+
+async function startServer() {
+  console.log("🌿 Starting Server…");
+
+  // Connect MongoDB once
   await connectDB();
-  app.listen(process.env.PORT || 3000, () => console.log("Server running"));
-  bot.launch();
-  console.log("Telegram bot running");
+
+  // Start Express API server
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () =>
+    console.log(`🚀 Express Server running on port ${PORT}`)
+  );
 }
 
-start();
+startServer();
